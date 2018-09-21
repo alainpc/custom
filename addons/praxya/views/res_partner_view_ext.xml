@@ -10,6 +10,7 @@
                     <field name="title" position="after">       
                             <field name="parking_card"/>
                             <field name="porcentaje_parking"/>
+                               
                     </field>
                     <xpath expr="//page[@name='internal_notes']" position="after">
 					<page string="Datos Parking">
