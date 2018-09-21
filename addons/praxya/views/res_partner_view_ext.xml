@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<openerp>
+<data>
+
+	<record id="praxya_res_partner_view_form_ext" model="ir.ui.view">
+		<field name="name">praxya.res.partner.view.ext</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_form" />
+		<field name="arch" type="xml">
+                    <field name="title" position="after">       
+                            <field name="parking_card"/>
+                            <field name="porcentaje_parking"/>
+                    </field>
+                    <xpath expr="//page[@name='internal_notes']" position="after">
+					<page string="Datos Parking">
+						<group>
+							<field name="plazas_ids">
+							<tree string="parking" editable="top">
+                            	<field name="planta"/>
+                            	<field name="plaza"/> 
+        					</tree>    
+							</field> 
+						</group>
+					</page>
+					
+					</xpath>                               
+		</field>
+	</record>
+</data>
+</openerp>
